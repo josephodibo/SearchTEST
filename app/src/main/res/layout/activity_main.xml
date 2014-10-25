@@ -1,0 +1,62 @@
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/movie"
+        android:scaleType="fitXY"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/zipEditText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Enter Zip Code"
+                android:textStyle="italic|bold"
+                android:inputType="phone"/>
+
+
+            <Button
+                android:id="@+id/searchOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SearchOn"
+                android:background="@drawable/shapes"
+                android:onClick="searchON"
+                android:textStyle="italic|bold"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/searchLayout"
+            android:divider="#ffff9e08"
+            android:dividerHeight="2dp"
+            android:textStyle="italic|bold">
+
+        </ListView>
+
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
